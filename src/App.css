@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin: 40px 0 30px 0;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #0066cc;
+}
+
+header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+footer code {
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+footer a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+/* Auth Section */
+.auth-section {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.tab-button.active {
+  background: #0066cc;
+  color: white;
+}
+
+.tab-button:hover {
+  background: #ddd;
+}
+
+.tab-button.active:hover {
+  background: #0052a3;
+}
+
+.tab-content {
+  animation: slideIn 0.2s;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Forms */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input[type='email'],
+input[type='password'],
+input[type='text'],
+input[type='number'] {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+button {
+  padding: 12px 20px;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background: #0052a3;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Messages */
+.error {
+  color: #d32f2f;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  padding: 8px;
+  background: #ffebee;
+  border-radius: 4px;
+}
+
+.success {
+  color: #388e3c;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  padding: 8px;
+  background: #e8f5e9;
+  border-radius: 4px;
+}
+
+/* Dashboard */
+.dashboard {
+  margin-top: 30px;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logout-btn {
+  background: #d32f2f;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.logout-btn:hover {
+  background: #b71c1c;
+}
+
+/* Grid */
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+/* Wallet Display */
+.wallet-display {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  border-left: 4px solid #0066cc;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.field label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.field code {
+  background: white;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  word-break: break-all;
+  font-family: 'Courier New', monospace;
+}
+
+.balance {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0066cc;
+}
+
+.copy-btn {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  background: #666;
+  align-self: flex-start;
+}
+
+.copy-btn:hover {
+  background: #444;
+}
+
+.fetch-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+/* Success Box */
+.success-box {
+  margin-top: 15px;
+  padding: 15px;
+  background: #e8f5e9;
+  border-radius: 4px;
+  border-left: 4px solid #388e3c;
+}
+
+.hint {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.hint a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hint a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-info {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+}
